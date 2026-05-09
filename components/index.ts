@@ -8,3 +8,4 @@ export { Footer } from "./Footer";
 export { ThemeSwitcher } from "./ThemeSwitcher";
 export { PageIntro } from "./PageIntro";
 export { Recruitment } from "./Recruitment";
+export { ScrollReveal } from "./ScrollReveal";

@@ -4,48 +4,54 @@ import { RECRUITMENT } from "@/lib/content";
 
 export function Recruitment() {
   return (
-    <section id="recruitment" className="section">
+    <section id="recruitment" className="section" data-reveal>
       <div className="container">
-        <div className="col-center" style={{ maxWidth: "600px" }}>
-          <h2
-            className="display-md serif-display"
+        <div style={{ maxWidth: "600px" }}>
+          {/* Section Label */}
+          <p
+            className="label"
             style={{
+              fontSize: "var(--label-size)",
+              letterSpacing: "var(--label-letter-spacing)",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+              marginBottom: "32px",
+            }}
+          >
+            {RECRUITMENT.label}
+          </p>
+
+          {/* Headline */}
+          <h2
+            className="serif-display"
+            style={{
+              fontSize: "clamp(32px, 4vw, 52px)",
+              fontWeight: 300,
+              lineHeight: "1.2",
               color: "var(--ink)",
-              marginBottom: "24px",
-              textAlign: "center",
+              marginBottom: "48px",
             }}
           >
             {RECRUITMENT.headline}
           </h2>
-          <p
-            className="lead"
-            style={{
-              color: "var(--ink)",
-              marginBottom: "48px",
-              textAlign: "center",
-            }}
-          >
-            {RECRUITMENT.body}
-          </p>
+
+          {/* CTA Link */}
           <a
             href={`mailto:${RECRUITMENT.email}?subject=${encodeURIComponent(RECRUITMENT.emailSubject)}`}
-            className="label"
             style={{
-              color: "var(--accent)",
+              fontSize: "13px",
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "var(--ink)",
               textDecoration: "none",
-              border: "1px solid var(--accent)",
-              padding: "12px 24px",
-              borderRadius: "4px",
+              transition: "color 0.2s ease",
               display: "inline-block",
-              transition: "all 0.2s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "var(--accent)";
-              e.currentTarget.style.color = "var(--paper)";
+              e.currentTarget.style.color = "var(--accent)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.color = "var(--accent)";
+              e.currentTarget.style.color = "var(--ink)";
             }}
           >
             {RECRUITMENT.emailLabel}

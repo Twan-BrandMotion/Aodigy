@@ -2,7 +2,7 @@ import { ABOUT } from "@/lib/content";
 
 export function About() {
   return (
-    <section className="section animate-in" id="about">
+    <section className="section animate-in" id="about" data-reveal>
       <div className="container">
         <div
           style={{

@@ -2,7 +2,7 @@ import { SERVICES } from "@/lib/content";
 
 export function Services() {
   return (
-    <section className="section animate-in" id="services">
+    <section className="section animate-in" id="services" data-reveal>
       <div className="container">
         <div style={{ gridColumn: "1 / -1" }}>
           {/* Services Grid */}

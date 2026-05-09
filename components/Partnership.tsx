@@ -2,7 +2,7 @@ import { PARTNERSHIP } from "@/lib/content";
 
 export function Partnership() {
   return (
-    <section className="section animate-in" id="partnership">
+    <section className="section animate-in" id="partnership" data-reveal>
       <div className="container">
         <div
           style={{

@@ -7,7 +7,15 @@ export function Hero() {
         <div className="grid-2-col">
           {/* Left: Headline */}
           <div>
-            <h1 className="display-lg serif-display" style={{ color: "var(--ink)" }}>
+            <h1
+              className="serif-display"
+              style={{
+                color: "var(--ink)",
+                fontSize: "clamp(64px, 8vw, 120px)",
+                lineHeight: "0.95",
+                fontWeight: 300,
+              }}
+            >
               {HERO.headline}
             </h1>
           </div>

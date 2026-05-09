@@ -4,7 +4,7 @@ import { CTA } from "@/lib/content";
 
 export function CallToAction() {
   return (
-    <section className="section animate-in" id="contact">
+    <section className="section animate-in" id="contact" data-reveal>
       <div className="container">
         <div
           style={{

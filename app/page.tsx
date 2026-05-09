@@ -8,11 +8,13 @@ import {
   Recruitment,
   Footer,
   ThemeSwitcher,
+  ScrollReveal,
 } from "@/components";
 
 export default function Home() {
   return (
     <>
+      <ScrollReveal />
       <Nav />
       <main style={{ paddingTop: "80px" }}>
         <Hero />

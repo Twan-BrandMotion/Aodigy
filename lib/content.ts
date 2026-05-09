@@ -99,11 +99,11 @@ export const CTA = {
    RECRUITMENT
    ============================================================================ */
 export const RECRUITMENT = {
-  headline: "Join the team.",
-  body: "We're growing and looking for motivated project managers and consultants. Let's talk.",
+  label: "Careers",
+  headline: "We're growing. Are you a project manager or consultant looking for your next challenge?",
   email: "info@aodigyconsulting.com",
   emailSubject: "I want to join the team!",
-  emailLabel: "Get in touch",
+  emailLabel: "Send your application →",
 };
 
 /* ============================================================================
