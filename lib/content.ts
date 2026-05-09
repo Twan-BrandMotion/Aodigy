@@ -41,11 +41,7 @@ export const HERO = {
    ============================================================================ */
 export const ABOUT = {
   watermark: "Katja Kraus",
-  text: `Katja Kraus has a degree in Political Science and an MSc in Business Informatics from Universität Mannheim. She built her career in SAP consulting, moved into project management, then HR leadership, and founded Aodigy.
-
-Her expertise spans enterprise architecture, project management, organizational change, and HR transformation—bringing both technical depth and human-centered design to every engagement.
-
-Today, Aodigy partners with mid-market enterprises and ambitious scale-ups to deliver transformations that stick. Not because they're flawlessly executed—but because they're rooted in strategy, built on buy-in, and designed for real people.`,
+  text: `Katja Kraus founded Aodigy after building her career across SAP consulting, project management, and HR leadership. She holds a degree in Political Science and an MSc in Business Informatics from the University of Mannheim. Her approach combines technical depth with a genuine focus on people — because the best transformations succeed not just technically, but because teams are brought along, not left behind.`,
 };
 
 /* ============================================================================
