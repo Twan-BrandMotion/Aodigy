@@ -4,6 +4,7 @@ import {
   Cormorant_Garamond,
 } from "next/font/google";
 import "./globals.css";
+import { PageIntro } from "@/components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${cormorantGaramond.variable} antialiased`}
     >
       <body>
+        <PageIntro />
         {children}
       </body>
     </html>

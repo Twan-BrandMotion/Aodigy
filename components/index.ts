@@ -6,3 +6,5 @@ export { Partnership } from "./Partnership";
 export { CallToAction } from "./CTA";
 export { Footer } from "./Footer";
 export { ThemeSwitcher } from "./ThemeSwitcher";
+export { PageIntro } from "./PageIntro";
+export { Recruitment } from "./Recruitment";

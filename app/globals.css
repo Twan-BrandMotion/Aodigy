@@ -4,10 +4,10 @@
    DESIGN TOKENS — 4 color tokens only, no shadows/gradients/blur
    ============================================================================ */
 :root {
-  --ink: #0e0e0e;
-  --paper: #f7f5f0;
-  --rule: #e0ddd8;
-  --accent: #b8955a;
+  --ink: #111111;
+  --paper: #f0ede6;
+  --rule: #c8c4bc;
+  --accent: #9a7a3a;
 
   /* Typography scale */
   --label-size: 11px;
@@ -43,26 +43,26 @@
 
 /* Theme 2: Burgundy */
 [data-theme="burgundy"] {
-  --ink: #f0e8e6;
-  --paper: #1f0e12;
+  --ink: #f5eeec;
+  --paper: #1a0a0e;
   --rule: #3d1a20;
-  --accent: #c4756a;
+  --accent: #e8957a;
 }
 
 /* Theme 3: Sage */
 [data-theme="sage"] {
-  --ink: #1a1f1a;
-  --paper: #f0f2ee;
-  --rule: #dde0da;
-  --accent: #7a9e7e;
+  --ink: #141a14;
+  --paper: #e8ede6;
+  --rule: #c4ccc0;
+  --accent: #4a7a52;
 }
 
 /* Theme 4: Graphite */
 [data-theme="graphite"] {
-  --ink: #1a1a1a;
-  --paper: #f4f2ee;
-  --rule: #ddd9d2;
-  --accent: #8c8070;
+  --ink: #0e0e0e;
+  --paper: #eae8e3;
+  --rule: #c4c0b8;
+  --accent: #6b5f52;
 }
 
 /* ============================================================================
@@ -82,6 +82,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Attribution text styling */
+.attribution,
+blockquote cite,
+blockquote + * {
+  opacity: 1 !important;
+  color: var(--ink) !important;
+}
+
 /* Page intro animation */
 .page-intro {
   position: fixed;
@@ -92,7 +100,7 @@ body {
 
 .page-intro.fade-out {
   opacity: 0;
-  transition: opacity 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-intro.done {
@@ -107,6 +115,7 @@ body {
 
 main {
   transition: opacity 200ms ease;
+  opacity: 0;
 }
 
 /* ============================================================================

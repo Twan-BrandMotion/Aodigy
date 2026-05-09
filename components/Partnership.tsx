@@ -41,7 +41,16 @@ export function Partnership() {
 
           {/* Author */}
           <div>
-            <p className="label" style={{ color: "var(--ink)" }}>
+            <p
+              className="label attribution"
+              style={{
+                color: "var(--ink)",
+                opacity: 1,
+                fontSize: "13px",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase"
+              }}
+            >
               {PARTNERSHIP.testimonialAuthor}
             </p>
             <p className="label" style={{ color: "var(--rule)", marginTop: "8px" }}>

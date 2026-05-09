@@ -20,6 +20,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Partnership", href: "#partnership" },
+  { label: "Join", href: "#recruitment" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -31,7 +32,7 @@ export const BRAND_NAME = "Aodigy";
 export const HERO = {
   headline: "From Strategy — to Delivery.",
   pullQuote:
-    "True transformation isn't about technology. It's about enabling people to work smarter, faster, and with more confidence.",
+    "Every obstacle is an opportunity to learn, grow, and excel.",
   pullQuoteAuthor: "Katja Kraus, Founder",
 };
 
@@ -40,9 +41,9 @@ export const HERO = {
    ============================================================================ */
 export const ABOUT = {
   watermark: "Katja Kraus",
-  text: `Katja Kraus founded Aodigy with 15+ years of enterprise transformation experience. As a consultant at SAP, she guided Fortune 500 companies through complex system implementations, managing multimillion-dollar programs across 40+ countries.
+  text: `Katja Kraus has a degree in Political Science and an MSc in Business Informatics from Universität Mannheim. She built her career in SAP consulting, moved into project management, then HR leadership, and founded Aodigy.
 
-She holds a degree in Political Science from Heidelberg University, and an MSc in Business Informatics from the University of Mannheim. Her expertise spans enterprise architecture, project management, organizational change, and HR transformation—bringing both technical depth and human-centered design to every engagement.
+Her expertise spans enterprise architecture, project management, organizational change, and HR transformation—bringing both technical depth and human-centered design to every engagement.
 
 Today, Aodigy partners with mid-market enterprises and ambitious scale-ups to deliver transformations that stick. Not because they're flawlessly executed—but because they're rooted in strategy, built on buy-in, and designed for real people.`,
 };
@@ -83,7 +84,7 @@ export const SERVICES: Service[] = [
 export const PARTNERSHIP = {
   intro: "Exclusive Partner",
   partner: "Virtualbadge.io",
-  testimonial: `Katja and the Aodigy team bring a rare combination: deep technical knowledge, strategic clarity, and genuine care for implementation outcomes. They don't just deliver—they enable.`,
+  testimonial: `Aodigy brings years of expertise in managing IT projects, ensuring our customers maximize the value of Virtualbadge within their organizations. We are proud of our partnership and look forward to many more successful projects together.`,
   testimonialAuthor: "Malte Zander, Founder & CEO",
   testimonialRole: "Virtualbadge.io",
 };
@@ -95,6 +96,17 @@ export const CTA = {
   headline: "Ready to Transform?",
   subheadline: "Let's talk about what's possible.",
   email: "info@aodigyconsulting.com",
+  emailLabel: "Get in touch",
+};
+
+/* ============================================================================
+   RECRUITMENT
+   ============================================================================ */
+export const RECRUITMENT = {
+  headline: "Join the team.",
+  body: "We're growing and looking for motivated project managers and consultants. Let's talk.",
+  email: "info@aodigyconsulting.com",
+  emailSubject: "I want to join the team!",
   emailLabel: "Get in touch",
 };
 

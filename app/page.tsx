@@ -5,6 +5,7 @@ import {
   Services,
   Partnership,
   CallToAction,
+  Recruitment,
   Footer,
   ThemeSwitcher,
 } from "@/components";
@@ -19,6 +20,7 @@ export default function Home() {
         <Services />
         <Partnership />
         <CallToAction />
+        <Recruitment />
         <Footer />
       </main>
       <ThemeSwitcher />
