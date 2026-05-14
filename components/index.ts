@@ -1,5 +1,4 @@
 export { Nav } from "./Nav";
-export { Hero } from "./Hero";
 export { KineticHero } from "./KineticHero";
 export { About } from "./About";
 export { Services } from "./Services";

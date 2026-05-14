@@ -1,6 +1,10 @@
-import { ABOUT } from "@/lib/content";
+import { useLanguage } from "@/lib/language-context";
+import { content } from "@/lib/content";
 
 export function About() {
+  const { language } = useLanguage();
+  const aboutContent = content[language].about;
+
   return (
     <section className="section animate-in" id="about" data-reveal>
       <div className="container">
@@ -22,12 +26,12 @@ export function About() {
               lineHeight: "1",
             }}
           >
-            {ABOUT.watermark}
+            {aboutContent.heading}
           </div>
 
           {/* Body Text */}
           <div className="body" style={{ color: "var(--ink)", whiteSpace: "pre-line" }}>
-            {ABOUT.text}
+            {aboutContent.bio}
           </div>
         </div>
       </div>

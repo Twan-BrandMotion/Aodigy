@@ -1,19 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/lib/language-context";
+import { content } from "@/lib/content";
 
-interface KineticHeroProps {
-  headline: string;
-  pullQuote: string;
-  pullQuoteAuthor: string;
-}
+export function KineticHero() {
+  const { language } = useLanguage();
+  const heroContent = content[language].hero;
 
-export function KineticHero({ headline, pullQuote, pullQuoteAuthor }: KineticHeroProps) {
   const [wordsVisible, setWordsVisible] = useState<boolean[]>([]);
   const [quoteVisible, setQuoteVisible] = useState(false);
 
   useEffect(() => {
-    const words = headline.split(' ');
+    const words = heroContent.headline.split(' ');
     setWordsVisible(new Array(words.length).fill(false));
 
     // Start animation after 200ms delay
@@ -33,9 +32,9 @@ export function KineticHero({ headline, pullQuote, pullQuoteAuthor }: KineticHer
         setQuoteVisible(true);
       }, words.length * 80 + 200);
     }, 200);
-  }, [headline]);
+  }, [heroContent.headline]);
 
-  const words = headline.split(' ');
+  const words = heroContent.headline.split(' ');
 
   return (
     <section className="section animate-in" id="hero" style={{ paddingTop: "0" }}>
@@ -83,7 +82,7 @@ export function KineticHero({ headline, pullQuote, pullQuoteAuthor }: KineticHer
                 transition: quoteVisible ? 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
               }}
             >
-              &ldquo;{pullQuote}&rdquo;
+              {heroContent.quote}
             </blockquote>
             <p
               className="label"
@@ -94,7 +93,7 @@ export function KineticHero({ headline, pullQuote, pullQuoteAuthor }: KineticHer
                 transition: quoteVisible ? 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
               }}
             >
-              {pullQuoteAuthor}
+              {heroContent.attribution}
             </p>
           </div>
         </div>

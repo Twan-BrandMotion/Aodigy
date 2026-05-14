@@ -1,8 +1,12 @@
 "use client";
 
-import { CTA } from "@/lib/content";
+import { useLanguage } from "@/lib/language-context";
+import { content } from "@/lib/content";
 
 export function CallToAction() {
+  const { language } = useLanguage();
+  const ctaContent = content[language].cta;
+
   return (
     <section className="section animate-in" id="contact" data-reveal>
       <div className="container">
@@ -17,17 +21,17 @@ export function CallToAction() {
         >
           {/* Headline */}
           <h2 className="display-lg serif-display" style={{ color: "var(--ink)", marginBottom: "32px" }}>
-            {CTA.headline}
+            {ctaContent.heading}
           </h2>
 
           {/* Subheadline */}
           <p className="lead" style={{ color: "var(--ink)", marginBottom: "48px" }}>
-            {CTA.subheadline}
+            {ctaContent.sub}
           </p>
 
           {/* Email Link */}
           <a
-            href={`mailto:${CTA.email}?subject=I%20want%20to%20join%20the%20team!`}
+            href={`mailto:info@aodigyconsulting.com?subject=I%20want%20to%20join%20the%20team!`}
             className="serif-display-bold"
             style={{
               fontSize: "28px",
@@ -48,7 +52,7 @@ export function CallToAction() {
               target.style.textDecorationColor = "var(--rule)";
             }}
           >
-            {CTA.email}
+            info@aodigyconsulting.com
           </a>
         </div>
       </div>

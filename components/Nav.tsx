@@ -1,6 +1,6 @@
 "use client";
 
-import { BRAND_NAME, NAV_LINKS, NAV_LINKS_DE } from "@/lib/content";
+import { content } from "@/lib/content";
 import { LanguageToggle } from "./LanguageToggle";
 import { useLanguage } from "@/lib/language-context";
 
@@ -11,7 +11,7 @@ interface NavProps {
 export function Nav({ language: propLanguage }: NavProps) {
   const { language: contextLanguage } = useLanguage();
   const language = propLanguage || contextLanguage;
-  const links = language === 'en' ? NAV_LINKS : NAV_LINKS_DE;
+  const navContent = content[language].nav;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b" style={{ borderColor: "var(--rule)" }}>
@@ -19,18 +19,28 @@ export function Nav({ language: propLanguage }: NavProps) {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", gap: "var(--gutter-desktop)" }}>
           {/* Logo */}
           <div className="serif-display" style={{ fontSize: "var(--display-sm)" }}>
-            {BRAND_NAME}
+            Aodigy
           </div>
 
           {/* Nav Links + Language Toggle */}
           <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "var(--gutter-desktop)" }}>
             {/* Nav Links */}
             <div style={{ display: "flex", gap: "var(--gutter-desktop)" }}>
-              {links.map((link) => (
-                <a key={link.href} href={link.href} className="label nav-link" style={{ color: "var(--ink)" }}>
-                  {link.label}
-                </a>
-              ))}
+              <a href="#services" className="label nav-link" style={{ color: "var(--ink)" }}>
+                {navContent.services}
+              </a>
+              <a href="#about" className="label nav-link" style={{ color: "var(--ink)" }}>
+                {navContent.about}
+              </a>
+              <a href="#partnership" className="label nav-link" style={{ color: "var(--ink)" }}>
+                {navContent.partnership}
+              </a>
+              <a href="#recruitment" className="label nav-link" style={{ color: "var(--ink)" }}>
+                {navContent.join}
+              </a>
+              <a href="#contact" className="label nav-link" style={{ color: "var(--ink)" }}>
+                {navContent.contact}
+              </a>
             </div>
 
             {/* Separator */}

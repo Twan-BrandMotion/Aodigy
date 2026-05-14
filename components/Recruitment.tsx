@@ -1,8 +1,12 @@
 "use client";
 
-import { RECRUITMENT } from "@/lib/content";
+import { useLanguage } from "@/lib/language-context";
+import { content } from "@/lib/content";
 
 export function Recruitment() {
+  const { language } = useLanguage();
+  const careersContent = content[language].careers;
+
   return (
     <section id="recruitment" className="section" data-reveal>
       <div className="container">
@@ -18,7 +22,7 @@ export function Recruitment() {
               marginBottom: "32px",
             }}
           >
-            {RECRUITMENT.label}
+            {careersContent.label}
           </p>
 
           {/* Headline */}
@@ -32,12 +36,12 @@ export function Recruitment() {
               marginBottom: "48px",
             }}
           >
-            {RECRUITMENT.headline}
+            {careersContent.heading}
           </h2>
 
           {/* CTA Link */}
           <a
-            href={`mailto:${RECRUITMENT.email}?subject=${encodeURIComponent(RECRUITMENT.emailSubject)}`}
+            href={`mailto:info@aodigyconsulting.com?subject=I%20want%20to%20join%20the%20team!`}
             style={{
               fontSize: "13px",
               textTransform: "uppercase",
@@ -54,7 +58,7 @@ export function Recruitment() {
               e.currentTarget.style.color = "var(--ink)";
             }}
           >
-            {RECRUITMENT.emailLabel}
+            {careersContent.cta}
           </a>
         </div>
       </div>

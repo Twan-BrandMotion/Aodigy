@@ -16,7 +16,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Load language from localStorage
-    const saved = localStorage.getItem('aodigy-language') as Language;
+    const saved = (localStorage.getItem('aodigy-lang') || localStorage.getItem('aodigy-language')) as Language;
     if (saved && (saved === 'en' || saved === 'de')) {
       setLanguageState(saved);
     }
@@ -24,7 +24,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('aodigy-language', lang);
+    localStorage.setItem('aodigy-lang', lang);
   };
 
   return (

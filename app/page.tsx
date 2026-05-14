@@ -12,22 +12,14 @@ import {
   ThemeSwitcher,
   ScrollReveal,
 } from "@/components";
-import { useLanguage } from "@/lib/language-context";
-import { HERO, ABOUT, SERVICES, PARTNERSHIP, CTA, RECRUITMENT } from "@/lib/content";
 
 export default function Home() {
-  const { language } = useLanguage();
-
   return (
     <>
       <ScrollReveal />
-      <Nav language={language} />
+      <Nav />
       <main>
-        <KineticHero
-          headline={HERO.headline}
-          pullQuote={HERO.pullQuote}
-          pullQuoteAuthor={HERO.pullQuoteAuthor}
-        />
+        <KineticHero />
         <About />
         <Services />
         <Partnership />

@@ -1,16 +1,20 @@
-import { SERVICES } from "@/lib/content";
+import { useLanguage } from "@/lib/language-context";
+import { content } from "@/lib/content";
 
 export function Services() {
+  const { language } = useLanguage();
+  const servicesContent = content[language].services;
+
   return (
     <section className="section animate-in" id="services" data-reveal>
       <div className="container">
         <div style={{ gridColumn: "1 / -1" }}>
           {/* Services Grid */}
-          {SERVICES.map((service) => (
-            <div key={service.number} className="service-row">
+          {servicesContent.items.map((service) => (
+            <div key={service.num} className="service-row">
               {/* Number */}
               <div className="label" style={{ color: "var(--accent)" }}>
-                {service.number}
+                {service.num}
               </div>
 
               {/* Title */}
@@ -38,7 +42,7 @@ export function Services() {
                   textAlign: "right",
                 }}
               >
-                {service.description}
+                {service.desc}
               </div>
             </div>
           ))}

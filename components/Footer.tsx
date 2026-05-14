@@ -1,6 +1,10 @@
-import { FOOTER } from "@/lib/content";
+import { useLanguage } from "@/lib/language-context";
+import { content } from "@/lib/content";
 
 export function Footer() {
+  const { language } = useLanguage();
+  const footerContent = content[language].footer;
+
   return (
     <footer
       className="section"
@@ -22,7 +26,7 @@ export function Footer() {
         >
           {/* Logo Left */}
           <div className="serif-display" style={{ fontSize: "18px", color: "var(--ink)" }}>
-            {FOOTER.brand}
+            Aodigy
           </div>
 
           {/* Legal Links Center */}
@@ -34,20 +38,19 @@ export function Footer() {
               textAlign: "center",
             }}
           >
-            {FOOTER.links.map((link) => (
-              <a key={link.href} href={link.href} className="label" style={{ color: "var(--ink)" }}>
-                {link.label}
-              </a>
-            ))}
+            <a href="#" className="label" style={{ color: "var(--ink)" }}>
+              {footerContent.imprint}
+            </a>
+            <a href="#" className="label" style={{ color: "var(--ink)" }}>
+              {footerContent.privacy}
+            </a>
           </div>
 
           {/* Social Right */}
           <div style={{ display: "flex", justifyContent: "flex-end", gap: "24px" }}>
-            {FOOTER.socialLinks.map((link) => (
-              <a key={link.href} href={link.href} className="label" style={{ color: "var(--ink)" }} target="_blank" rel="noopener noreferrer">
-                {link.label}
-              </a>
-            ))}
+            <a href="https://linkedin.com" className="label" style={{ color: "var(--ink)" }} target="_blank" rel="noopener noreferrer">
+              {footerContent.linkedin}
+            </a>
           </div>
         </div>
       </div>

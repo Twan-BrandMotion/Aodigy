@@ -1,6 +1,10 @@
-import { PARTNERSHIP } from "@/lib/content";
+import { useLanguage } from "@/lib/language-context";
+import { content } from "@/lib/content";
 
 export function Partnership() {
+  const { language } = useLanguage();
+  const partnershipContent = content[language].partnership;
+
   return (
     <section className="section animate-in" id="partnership" data-reveal>
       <div className="container">
@@ -17,7 +21,7 @@ export function Partnership() {
         >
           {/* "Exclusive Partner" label */}
           <p className="label" style={{ color: "var(--accent)", marginBottom: "24px" }}>
-            {PARTNERSHIP.intro}
+            {partnershipContent.label}
           </p>
 
           {/* Partner Name */}
@@ -25,7 +29,7 @@ export function Partnership() {
             className="display-md serif-display"
             style={{ color: "var(--ink)", marginBottom: "48px" }}
           >
-            {PARTNERSHIP.partner}
+            {partnershipContent.heading}
           </h2>
 
           {/* Testimonial */}
@@ -36,7 +40,7 @@ export function Partnership() {
               marginBottom: "24px",
             }}
           >
-            &ldquo;{PARTNERSHIP.testimonial}&rdquo;
+            {partnershipContent.quote}
           </blockquote>
 
           {/* Author */}
@@ -51,10 +55,10 @@ export function Partnership() {
                 textTransform: "uppercase"
               }}
             >
-              {PARTNERSHIP.testimonialAuthor}
+              {partnershipContent.attribution}
             </p>
             <p className="label" style={{ color: "var(--rule)", marginTop: "8px" }}>
-              {PARTNERSHIP.testimonialRole}
+              {partnershipContent.company}
             </p>
           </div>
         </div>
