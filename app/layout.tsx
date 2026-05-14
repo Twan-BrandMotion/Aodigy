@@ -20,11 +20,11 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Aodigy — Enterprise Transformation Strategy & Delivery",
+  title: "Aodigy — IT Consulting, Walldorf",
   description:
     "Strategic consulting for enterprise transformation. From strategy to delivery, we enable organizations to achieve more.",
   openGraph: {
-    title: "Aodigy — Enterprise Transformation Strategy & Delivery",
+    title: "Aodigy — IT Consulting, Walldorf",
     description:
       "Strategic consulting for enterprise transformation. From strategy to delivery, we enable organizations to achieve more.",
     type: "website",
