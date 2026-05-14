@@ -4,7 +4,8 @@ import {
   Cormorant_Garamond,
 } from "next/font/google";
 import "./globals.css";
-import { PageIntro } from "@/components";
+import { PageIntro, CustomCursor } from "@/components";
+import { LanguageProvider } from "@/lib/language-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,11 +21,11 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Aodigy — IT Consulting, Walldorf",
+  title: "Aodigy — Enterprise Transformation Strategy & Delivery",
   description:
     "Strategic consulting for enterprise transformation. From strategy to delivery, we enable organizations to achieve more.",
   openGraph: {
-    title: "Aodigy — IT Consulting, Walldorf",
+    title: "Aodigy — Enterprise Transformation Strategy & Delivery",
     description:
       "Strategic consulting for enterprise transformation. From strategy to delivery, we enable organizations to achieve more.",
     type: "website",
@@ -42,8 +43,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${cormorantGaramond.variable} antialiased`}
     >
       <body>
-        <PageIntro />
-        {children}
+        <LanguageProvider>
+          <PageIntro />
+          <CustomCursor />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

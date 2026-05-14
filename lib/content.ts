@@ -24,6 +24,14 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Contact", href: "#contact" },
 ];
 
+export const NAV_LINKS_DE: NavLink[] = [
+  { label: "Leistungen", href: "#services" },
+  { label: "Über uns", href: "#about" },
+  { label: "Partnerschaft", href: "#partnership" },
+  { label: "Mitmachen", href: "#recruitment" },
+  { label: "Kontakt", href: "#contact" },
+];
+
 export const BRAND_NAME = "Aodigy";
 
 /* ============================================================================

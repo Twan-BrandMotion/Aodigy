@@ -432,6 +432,17 @@ a:hover {
 }
 
 /* ============================================================================
+   MOBILE OPTIMIZATION
+   ============================================================================ */
+
+/* Hero mobile padding */
+@media (max-width: 767px) {
+  #hero {
+    padding-top: 80px !important;
+  }
+}
+
+/* ============================================================================
    RESPONSIVE UTILITIES
    ============================================================================ */
 
@@ -444,5 +455,64 @@ a:hover {
 @media (min-width: 768px) {
   .hide-desktop {
     display: none;
+  }
+}
+
+/* ============================================================================
+   CUSTOM CURSOR (DESKTOP ONLY)
+   ============================================================================ */
+
+@media (pointer: fine) {
+  html, body, a, button, * {
+    cursor: none !important;
+  }
+}
+
+.cursor-dot {
+  position: fixed;
+  z-index: 9998;
+  pointer-events: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ink);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  z-index: 9997;
+  pointer-events: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--ink);
+  opacity: 0.35;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease, width 0.2s ease,
+              height 0.2s ease, opacity 0.2s ease;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+/* On hover over links/buttons: ring expands */
+body.cursor-hover .cursor-ring {
+  width: 48px;
+  height: 48px;
+  opacity: 0.2;
+}
+
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
   }
 }

@@ -27,12 +27,11 @@ export function CallToAction() {
 
           {/* Email Link */}
           <a
-            href={`mailto:${CTA.email}`}
+            href={`mailto:${CTA.email}?subject=I%20want%20to%20join%20the%20team!`}
             className="serif-display-bold"
             style={{
               fontSize: "28px",
               color: "var(--ink)",
-              opacity: 1,
               textDecoration: "underline",
               textDecorationColor: "var(--rule)",
               textUnderlineOffset: "6px",

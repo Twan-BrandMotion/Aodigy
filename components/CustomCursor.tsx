@@ -41,11 +41,8 @@ export function CustomCursor() {
       requestAnimationFrame(updateRing);
     };
 
-    const handleMouseEnter = (e: Event) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName === "A" || target.tagName === "BUTTON") {
-        document.body.classList.add("cursor-hover");
-      }
+    const handleMouseEnter = () => {
+      document.body.classList.add("cursor-hover");
     };
 
     const handleMouseLeave = () => {
@@ -53,8 +50,6 @@ export function CustomCursor() {
     };
 
     document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseenter", handleMouseEnter, true);
-    document.addEventListener("mouseleave", handleMouseLeave, true);
 
     // Add hover listeners to all links and buttons
     const links = document.querySelectorAll("a, button");
@@ -67,8 +62,6 @@ export function CustomCursor() {
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseenter", handleMouseEnter, true);
-      document.removeEventListener("mouseleave", handleMouseLeave, true);
       links.forEach((el) => {
         el.removeEventListener("mouseenter", handleMouseEnter);
         el.removeEventListener("mouseleave", handleMouseLeave);

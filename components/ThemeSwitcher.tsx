@@ -73,23 +73,25 @@ export function ThemeSwitcher() {
         gap: "10px",
       }}
     >
-      {themes.map((theme) => {
+      {themes.map((theme, index) => {
         const isActive = currentTheme === theme.name;
-        const borderColor = `${theme.colors.ink}66`; // 40% opacity
+        // Hardcoded background colors for each theme
+        const swatchColors = ['#f0ede6', '#111111', '#1a0a0e', '#e4ebe2'];
+        const backgroundColor = swatchColors[index];
 
         return (
           <button
             key={theme.name}
             onClick={() => switchTheme(theme.name)}
             style={{
-              width: "12px",
-              height: "12px",
+              width: "11px",
+              height: "11px",
               borderRadius: "50%",
-              border: `1.5px solid ${borderColor}`,
-              backgroundColor: theme.colors.paper,
+              border: "1px solid rgba(0,0,0,0.15)",
+              backgroundColor: backgroundColor,
               cursor: "pointer",
-              opacity: isActive ? 1 : 0.5,
-              transform: isActive ? "scale(1.4)" : "scale(1)",
+              outline: isActive ? "1.5px solid var(--ink)" : "none",
+              outlineOffset: isActive ? "2px" : "0",
               transition: "transform 0.2s ease, opacity 0.2s ease",
             }}
             aria-label={`Switch to ${theme.name} theme`}
